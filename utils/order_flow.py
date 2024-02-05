@@ -1,6 +1,5 @@
 import datetime
 import numpy as np
-    
 
 class OrderFlow:
     def calculate_cvd(self, trades, latest_trade_time, timeframe):

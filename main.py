@@ -93,11 +93,8 @@ def layer_init(layer, std=np.sqrt(2), bias_const=0.0):
     torch.nn.init.constant_(layer.bias, bias_const)
     return layer
 
-observation_keys = [
-    'position', 'weekly_vp', 'daily_vp',
-    'vp_vb_500', 'vp_vb_200', 'vp_vb_100'
-]
-
+# Dictionary keys from Environment Obs
+observation_keys = [ 'position', 'weekly_vp', 'daily_vp', 'vp_vb_500', 'vp_vb_200', 'vp_vb_100']
 
 class Agent(nn.Module):
     def __init__(self, envs, lstm_layers=3):
